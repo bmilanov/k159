@@ -33,7 +33,7 @@ uint16_t k159_get_usb_product_id();
 void k159_get_manufacturer_string(uint8_t * const buffer, uint8_t * const size);
 void k159_get_product_string(uint8_t * const buffer, uint8_t * const size);
 void k159_get_relays(struct k159_context const * const k159_ctx, uint8_t * const relays);
-void k159_set_relays(struct k159_context const * const k159_ctx, uint8_t relays);
+void k159_set_relays(struct k159_context const * const k159_ctx, uint8_t const relays);
 /* -------------------------------------------------------------------------- */
 
 #endif

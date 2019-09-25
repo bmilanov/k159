@@ -42,7 +42,7 @@ void
 k159_set_relays
 (
     struct k159_context const * const k159_ctx,
-    uint8_t relays
+    uint8_t const relays
 )
 {
     uint8_t dummy[2];
