@@ -1,0 +1,3 @@
+Relays are bitmapped to 1 byte
+Write to endpoint:  0x00, bRequestType: 0x40 type: vendor (0x02), bRequest: 1, wIndex: 0, wLength: 2
+Read from endpoint: 0x00, bRequestType: 0xC0 type: vendor (0x02), bRequest: 2, wIndex: 0, wLength: 1
