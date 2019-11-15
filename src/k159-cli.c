@@ -60,6 +60,11 @@ main
 
     k159_ctx.usb_control_transfer = usb_control_transfer;
 
+    if (argc > 2)
+    {
+        printf("Too many arguments! Expected none or 1, got: %d\n", argc - 1);
+        return -1;
+    }
     if (argc == 2)
     {
         relay_values = strtoul(argv[1], NULL, 16);
@@ -127,7 +132,15 @@ main
     }
 
 
-    k159_set_relays(&k159_ctx, relay_values);
+    if (argc == 2)
+    {
+        k159_set_relays(&k159_ctx, relay_values);
+    }
+    else
+    {
+        k159_get_relays(&k159_ctx, &relay_values);
+        printf("%d\n", relay_values);
+    }
 
     libusb_free_device_list(devs, 1);
     libusb_exit(context);
